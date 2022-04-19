@@ -23,7 +23,6 @@ if uploaded_file is not None:
     #df=pd.read_csv(uploaded_file, encoding="utf8", errors='ignore')
     #read xls or xlsx
     df=pd.read_excel(uploaded_file)#, encoding="utf8", errors='ignore')
-    #st.text("")
     st.success('データ変換を開始します．')
     st.dataframe(df)
     #st.table(df)
@@ -39,4 +38,4 @@ if uploaded_file is not None:
     href = f'<a href="data:application/octet-stream;base64,{b64}" download="GIFT_format.txt">download</a>'
     st.markdown(f"変換完了 ダウンロードする {href}", unsafe_allow_html=True)
 else:
-    st.warning("you need to upload a csv or excel file.")
+    st.warning("you need to upload a XLSX file.")
