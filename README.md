@@ -6,5 +6,5 @@
 アプリURL:[https://share.streamlit.io/shmaki/mcquiz_xlsxtogift/main/xlsx_to_gift_moodle_quiz.py](https://share.streamlit.io/shmaki/mcquiz_xlsxtogift/main/xlsx_to_gift_moodle_quiz.py)
 
 
-Copyright (c) 2022 Shigeyuki Magi
-This software is released under the MIT License, see LICENSE.
+Copyright (c) 2022 Shigeyuki Magi  
+This source code is released under the MIT License, see LICENSE.
