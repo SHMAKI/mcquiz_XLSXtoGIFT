@@ -36,6 +36,6 @@ if uploaded_file is not None:
 
     b64 = base64.b64encode(txt.encode()).decode()
     href = f'<a href="data:application/octet-stream;base64,{b64}" download="GIFT_format.txt">download</a>'
-    st.markdown(f"変換完了 ダウンロードする {href}", unsafe_allow_html=True)
+    st.markdown(f"GIFTフォーマットのテキストをダウンロードする： {href}", unsafe_allow_html=True)
 else:
     st.warning("you need to upload a XLSX file.")
