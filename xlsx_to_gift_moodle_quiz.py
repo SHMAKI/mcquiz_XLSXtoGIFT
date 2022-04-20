@@ -16,7 +16,7 @@ st.text('一行目に列ラベル，一列目に問題文，二列目に正答�
 
 df_sample = pd.DataFrame(data=[["日本一高い山は？", "富士山","天保山","八ヶ岳","北岳","桜島",]],
                          columns=["問題文", "正答", "誤答１", "誤答２", "誤答３", "誤答４",])
-xlsx = pd.to_excel(df_sample, index_col=False)
+xlsx = df_sample.to_excel(index=False)
 b64_df = base64.b64encode(xlsx.encode()).decode()
 href = f'<a href="data:application/octet-stream;base64,{b64_df}" download="sample.xlsx">download</a>'
 st.markdown(f"サンプルxlsxファイルをダウンロードする： {href}", unsafe_allow_html=True)
