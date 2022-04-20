@@ -9,9 +9,9 @@ from PIL import Image
 from io import BytesIO
 from pyxlsb import open_workbook as open_xlsb
 
-def file_downloader(filename, file_label='File'):
-    with open(filename, 'rb') as f:
-        data = f.read()
+# def file_downloader(filename, file_label='File'):
+#     with open(filename, 'rb') as f:
+#         data = f.read()
 
 def to_excel(df):
     output = BytesIO()
@@ -61,8 +61,11 @@ if uploaded_file is not None:
             txt = txt +"~"+df.iloc[i,j]+"\n"
         txt = txt +"}\n\n"
 
-    b64 = base64.b64encode(txt.encode()).decode()
-    href = f'<a href="data:application/octet-stream;base64,{b64}" download="GIFT_format.txt">download</a>'
-    st.markdown(f"GIFTフォーマットのテキストをダウンロードする： {href}", unsafe_allow_html=True)
+    #b64 = base64.b64encode(txt.encode()).decode()
+    #href = f'<a href="data:application/octet-stream;base64,{b64}" download="GIFT_format.txt">download</a>'
+    #st.markdown(f"GIFTフォーマットのテキストをダウンロードする： {href}", unsafe_allow_html=True)
+    st.download_button(label='📥 Download GIFT format txt',
+                                data=txt,
+                                file_name= 'GIFT_format.txt')
 else:
     st.warning("you need to upload a XLSX file.")
