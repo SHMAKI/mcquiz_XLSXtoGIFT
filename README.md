@@ -1,5 +1,6 @@
-このリポジトリは，learning management systems (LMS)の一種であるmoodleに小テストの多肢選択問題をインポート可能な[GIFTフォーマット](https://docs.moodle.org/3x/ja/GIFTフォーマット)
-をエクセルファイルから作成するためのwebアプリのソースコードである．
+このリポジトリは，エクセルファイルに整理された小テストの多肢選択問題を[GIFTフォーマット](https://docs.moodle.org/3x/ja/GIFTフォーマット)に変換するためのwebアプリのソースコードである．
+
+出力されたGIFTフォーマットファイルは，learning management systems (LMS)であるmoodleに直接インポート可能である．
 
 アプリ開発はpython, streamlitを使用し，Streamlit Sharingでデプロイしている．
 
