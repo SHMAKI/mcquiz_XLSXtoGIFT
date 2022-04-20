@@ -14,12 +14,12 @@ def file_downloader(filename, file_label='File'):
 st.title('Moodleクイズ変換君')
 st.text('一行目に列ラベル，一列目に問題文，二列目に正答，三列目以降に誤答が入った\nエクセルファイルをGIFTフォーマットに変換します．')
 
-df_sample = pd.DataFrame(data=[["日本一高い山は？", "富士山","天保山","八ヶ岳","北岳","桜島",]],
-                         columns=["問題文", "正答", "誤答１", "誤答２", "誤答３", "誤答４",])
-xlsx = df_sample.to_excel("dummy.xlsx",index=False)
-b64_df = base64.b64encode(xlsx.encode()).decode()
-href = f'<a href="data:application/octet-stream;base64,{b64_df}" download="sample.xlsx">download</a>'
-st.markdown(f"サンプルxlsxファイルをダウンロードする： {href}", unsafe_allow_html=True)
+# df_sample = pd.DataFrame(data=[["日本一高い山は？", "富士山","天保山","八ヶ岳","北岳","桜島",]],
+#                          columns=["問題文", "正答", "誤答１", "誤答２", "誤答３", "誤答４",])
+# xlsx = df_sample.to_excel("dummy.xlsx",index=False)
+# b64_df = base64.b64encode(xlsx.encode()).decode()
+# href = f'<a href="data:application/octet-stream;base64,{b64_df}" download="sample.xlsx">download</a>'
+# st.markdown(f"サンプルxlsxファイルをダウンロードする： {href}", unsafe_allow_html=True)
 
 image = Image.open("img/sample.png")
 st.image(image, caption="sample", use_column_width=True)
